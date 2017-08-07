@@ -1,0 +1,18 @@
+<h1>Pages#game</h1>
+<p>Find me in app/views/pages/game.html.erb</p>
+
+
+<h1>******** Welcome to the longest word-game!********</h1>
+<h3>Here is your grid:</h3>
+<h3><%= @grid %></h3>
+
+
+<form action="/score">
+  <label for="question">What's your best shot?</label>
+  <input type="text" id="question" name="shot" placeholder="what time is it?">
+  <input type="hidden" name="grid" value="<%= @grid %>">
+  <input type="hidden" name='time' value="<%= Time.now  %>">
+  <button class="btn btn-default" type="submit">Submit</button>
+</form>
+
+<h1>*****************************************************</h1>
